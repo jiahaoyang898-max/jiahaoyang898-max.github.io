@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f4ec">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23e2472f'/%3E%3Cg fill='%23f7f2e6'%3E%3Ccircle cx='24' cy='16.5' r='5.1'/%3E%3Ccircle cx='31.5' cy='24' r='5.1'/%3E%3Ccircle cx='24' cy='31.5' r='5.1'/%3E%3Ccircle cx='16.5' cy='24' r='5.1'/%3E%3C/g%3E%3Ccircle cx='24' cy='24' r='3.9' fill='%232748f0'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2323855c'/%3E%3Cstop offset='1' stop-color='%232748f0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='12' fill='url(%23g)'/%3E%3Cg fill='%23f7f2e6'%3E%3Ccircle cx='24' cy='16.5' r='5.1'/%3E%3Ccircle cx='31.5' cy='24' r='5.1'/%3E%3Ccircle cx='24' cy='31.5' r='5.1'/%3E%3Ccircle cx='16.5' cy='24' r='5.1'/%3E%3C/g%3E%3Ccircle cx='24' cy='24' r='3.9' fill='%230e3528'/%3E%3C/svg%3E">
 <title>杨佳好 · AI 应用开发 / FDE</title>
 <meta name="description" content="杨佳好 · AI 应用开发 / FDE 作品集：5 个可运行的 AI 系统，企业级 RAG、Text-to-SQL、多 Agent 与私有化部署。">
 <style>
@@ -92,7 +92,7 @@ html.grid-on .grid-overlay,html.grid-on .grid-label{opacity:1}
 }
 .rail-top{display:flex;flex-direction:column;gap:13px}
 .brand{display:flex;align-items:center;gap:11px}
-.brand-mark{width:42px;height:42px;flex:0 0 42px;display:block;transition:transform .45s var(--ease)}
+.brand-mark{width:42px;height:42px;flex:0 0 42px;display:block;filter:drop-shadow(0 1px 3px rgba(23,22,16,.14));transition:transform .45s var(--ease)}
 .brand-mark svg{width:100%;height:100%;overflow:visible}
 .brand-mark:hover{transform:rotate(-4deg) scale(1.03)}
 .brand-text{min-width:0}
@@ -1243,13 +1243,14 @@ html.no-motion .reveal{opacity:1;transform:none}
   <div class="rail-top">
     <div class="brand">
       <a class="brand-mark" href="#home" aria-label="杨佳好首页">
-        <svg viewBox="0 0 44 44" aria-hidden="true">
-          <defs>
-            <filter id="sealRough"><feTurbulence type="fractalNoise" baseFrequency=".075" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.7"/></filter>
-          </defs>
-          <rect x="2" y="2" width="40" height="40" rx="7" fill="#e2472f" filter="url(#sealRough)"/>
-          <rect x="5.5" y="5.5" width="33" height="33" rx="4.5" fill="none" stroke="#fbf7ec" stroke-opacity=".55" stroke-width=".9"/>
-          <text x="22" y="29" text-anchor="middle" fill="#fbf7ec" font-size="20" font-family="Noto Serif SC,serif" font-weight="600">佳</text>
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="45" height="45" rx="14" fill="#f7f2e6" stroke="rgba(23,22,16,.14)" stroke-width=".7"/>
+          <rect x="5" y="5" width="38" height="38" rx="10.5" fill="url(#flowerGrad)"/>
+          <g fill="#f7f2e6">
+            <circle cx="24" cy="17.4" r="4.7"/><circle cx="30.6" cy="24" r="4.7"/>
+            <circle cx="24" cy="30.6" r="4.7"/><circle cx="17.4" cy="24" r="4.7"/>
+          </g>
+          <circle cx="24" cy="24" r="3.5" fill="#0e3528"/>
         </svg>
       </a>
       <div class="brand-text">
