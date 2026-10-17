@@ -139,8 +139,6 @@ html.grid-on .grid-overlay,html.grid-on .grid-label{opacity:1}
   content:"";position:absolute;left:0;top:9px;bottom:9px;width:2px;border-radius:2px;background:var(--cobalt);
 }
 .nav-item.active .num{color:var(--cobalt)}
-.nav-count{font-family:var(--mono);font-size:8px;color:var(--muted-2)}
-.nav-item.active .nav-count{color:var(--cobalt)}
 .rail-systems{display:flex;flex-direction:column;gap:1px}
 .sys-link{
   display:flex;align-items:center;justify-content:space-between;gap:6px;
@@ -151,8 +149,6 @@ html.grid-on .grid-overlay,html.grid-on .grid-label{opacity:1}
 .sys-state{font-family:var(--mono);font-size:6.5px;letter-spacing:.11em;color:var(--muted-2)}
 .sys-state.live{color:var(--jade)}
 .rail-bottom{margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
-.clock{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--muted)}
-.clock b{font-weight:500;color:var(--ink-2);font-size:9.5px}
 .rail-links{display:flex;gap:12px;margin-top:9px;font-family:var(--mono);font-size:8px;letter-spacing:.08em}
 .rail-links a{color:var(--muted);border-bottom:1px solid transparent;transition:.2s}
 .rail-links a:hover{color:var(--cobalt);border-color:var(--cobalt)}
@@ -189,14 +185,12 @@ section[id]{scroll-margin-top:0}
 .sec-kicker{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:8.5px;letter-spacing:.17em;color:var(--muted)}
 .sec-index{color:var(--cobalt);font-weight:500}
 .sec-line{width:44px;height:1px;background:var(--line-2)}
-.sec-title-row{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:end;margin-top:20px}
+.sec-title-row{display:grid;grid-template-columns:minmax(0,1fr);align-items:end;margin-top:20px}
 .sec-head h2{
   font-family:var(--serif-cn);font-size:clamp(34px,3.7vw,50px);font-weight:600;
   line-height:1.14;letter-spacing:-.025em;
 }
 .sec-head h2 .serif-en{display:inline-block;font-size:.92em;color:var(--cobalt);line-height:1.05}
-.sec-lead{font-size:12.5px;line-height:1.9;color:var(--muted);max-width:340px}
-.sec-lead b{color:var(--ink);font-weight:500}
 .sec-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;padding-top:12px;border-top:1px solid var(--line);font-family:var(--mono);font-size:7.5px;letter-spacing:.12em;color:var(--muted-2)}
 .ghost-number{
   position:absolute;right:-6px;top:-54px;font-family:var(--serif-en);font-style:italic;
@@ -611,8 +605,6 @@ section[id]{scroll-margin-top:0}
 .evidence .sec-index{color:var(--lime)}
 .evidence h2{color:var(--cream)}
 .evidence h2 .serif-en{color:var(--lime)}
-.evidence .sec-lead{color:rgba(247,242,230,.5)}
-.evidence .sec-lead b{color:rgba(247,242,230,.92)}
 .evidence .sec-meta{color:rgba(247,242,230,.3);border-color:rgba(247,242,230,.14)}
 .proof-grid{
   position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
@@ -880,8 +872,7 @@ html.no-motion .reveal{opacity:1;transform:none}
   .proof-note{grid-column:1/-1;padding:14px 20px;flex-direction:row;align-items:center;border-top:1px solid var(--line)}
   .ticker{padding-top:9px}
   .section{padding:82px 0}
-  .sec-title-row{grid-template-columns:1fr;gap:18px;align-items:start}
-  .sec-lead{max-width:560px}
+  .sec-title-row{grid-template-columns:1fr;align-items:start}
   .ghost-number{font-size:130px;top:-36px}
   .feature{grid-template-columns:1fr;min-height:0;padding:0}
   .feature-copy{padding:28px 24px 20px}
@@ -952,7 +943,6 @@ html.no-motion .reveal{opacity:1;transform:none}
   .section{padding:66px 0}
   .sec-head h2{font-size:31px}
   .sec-title-row{margin-top:16px}
-  .sec-lead{font-size:11px}
   .sec-meta{font-size:6.5px;gap:12px}
   .ghost-number{font-size:100px}
   .feature-copy{padding:22px 18px 16px}
@@ -1250,12 +1240,10 @@ html.no-motion .reveal{opacity:1;transform:none}
   <nav class="nav" aria-label="主导航">
     <div class="nav-label">INDEX</div>
     <a href="#home" class="nav-item active" data-sec="home"><span class="num">01</span><span>首页</span><span class="nav-arrow">↗</span></a>
-    <a href="#modules" class="nav-item" data-sec="modules"><span class="num">02</span><span>作品矩阵</span><span class="nav-count">05</span></a>
-    <a href="#stack" class="nav-item" data-sec="stack"><span class="num">03</span><span>技术栈</span><span class="nav-count">04</span></a>
-    <a href="#adr" class="nav-item" data-sec="adr"><span class="num">04</span><span>工程决策</span><span class="nav-count">06</span></a>
-    <a href="#evidence" class="nav-item" data-sec="evidence"><span class="num">05</span><span>实测数据</span><span class="nav-arrow">↗</span></a>
-    <a href="#compare" class="nav-item" data-sec="compare"><span class="num">06</span><span>访问对比</span><span class="nav-arrow">↗</span></a>
-    <a href="#profile" class="nav-item" data-sec="profile"><span class="num">07</span><span>关于我</span><span class="nav-arrow">↗</span></a>
+    <a href="#modules" class="nav-item" data-sec="modules"><span class="num">02</span><span>作品矩阵</span><span class="nav-arrow">↗</span></a>
+    <a href="#stack" class="nav-item" data-sec="stack"><span class="num">03</span><span>技术栈</span><span class="nav-arrow">↗</span></a>
+    <a href="#evidence" class="nav-item" data-sec="evidence"><span class="num">04</span><span>实测数据</span><span class="nav-arrow">↗</span></a>
+    <a href="#profile" class="nav-item" data-sec="profile"><span class="num">05</span><span>关于我</span><span class="nav-arrow">↗</span></a>
   </nav>
 
   <div class="rail-systems">
@@ -1268,7 +1256,6 @@ html.no-motion .reveal{opacity:1;transform:none}
   </div>
 
   <div class="rail-bottom">
-    <div class="clock"><span>ZHENGZHOU</span><b id="clock">--:--</b></div>
     <div class="rail-links">
       <a href="mailto:2904410282@qq.com">EMAIL</a>
       <a href="https://github.com/jiahaoyang898-max" target="_blank" rel="noopener">GITHUB ↗</a>
@@ -1277,7 +1264,7 @@ html.no-motion .reveal{opacity:1;transform:none}
     <button class="motion-btn" id="motionBtn" type="button" aria-pressed="true">
       <span class="motion-track" aria-hidden="true"></span><span id="motionLabel">MOTION ON</span>
     </button>
-    <div class="rail-copy">© 2026 杨佳好<br>DATA SYNC 2026.10.16</div>
+    <div class="rail-copy">© 2026 杨佳好</div>
   </div>
 </aside>
 
@@ -1362,7 +1349,7 @@ html.no-motion .reveal{opacity:1;transform:none}
           <div class="proof-top"><span class="proof-num" data-count="24">24</span><span class="proof-unit">containers</span></div>
           <div class="proof-label"><span>Docker 在跑</span><svg class="spark" viewBox="0 0 52 16" aria-hidden="true"><path d="M1 12h9V8h8v4h8V5h8v7h8V3h9"/></svg></div>
         </div>
-        <a class="proof-note" href="#evidence"><b>数据口径</b><span class="read">采集于 2026.10.16 <span>↗</span></span></a>
+        <a class="proof-note" href="#evidence"><b>数据口径</b><span class="read">查看数据口径 <span>↗</span></span></a>
       </div>
 
       <div class="ticker" aria-hidden="true">
@@ -1569,58 +1556,19 @@ html.no-motion .reveal{opacity:1;transform:none}
           <span><img src="assets/icons/python.svg" alt="">Python</span><span><img src="assets/icons/fastapi.svg" alt="">FastAPI</span><span><img src="assets/icons/langchain.svg" alt="">LangChain</span><span><img src="assets/icons/react.svg" alt="">React</span><span><img src="assets/icons/nextdotjs.svg" alt="">Next.js</span><span><img src="assets/icons/vuedotjs.svg" alt="">Vue 3</span><span><img src="assets/icons/typescript.svg" alt="">TypeScript</span><span><img src="assets/icons/docker.svg" alt="">Docker</span><span><img src="assets/icons/nginx.svg" alt="">Nginx</span><span><img src="assets/icons/mysql.svg" alt="">MySQL</span><span><img src="assets/icons/redis.svg" alt="">Redis</span><span><img src="assets/icons/elasticsearch.svg" alt="">Elasticsearch</span><span><img src="assets/icons/milvus.svg" alt="">Milvus</span><span><img src="assets/icons/qdrant.svg" alt="">Qdrant</span><span><img src="assets/icons/linux.svg" alt="">Linux</span><span><img src="assets/icons/git.svg" alt="">Git</span>
         </div>
       </div>
-      <div class="stack-foot"><span>COVERAGE ≠ PROFICIENCY</span><span>SOURCE: 5 REPOS / 2026.10.16</span></div>
+      <div class="stack-foot"><span>COVERAGE ≠ PROFICIENCY</span><span>SOURCE: 5 REPOS</span></div>
     </div>
   </section>
 
-  <!-- 04 adr -->
-  <section class="section adr-sec" id="adr">
-    <div class="wrap">
-      <header class="sec-head reveal">
-        <div class="sec-kicker"><span class="sec-index">04</span><span class="sec-line"></span>DECISION LOG</div>
-        <div class="sec-title-row">
-          <h2>六个取舍，<br><span class="serif-en">all explainable.</span></h2>
-        </div>
-        <div class="sec-meta"><span>06 ADR</span><span>05 LOGIN ENTRIES</span><span>0 PASSWORD PROMPTS</span><span>UFW OPEN</span></div>
-      </header>
-
-      <div class="adr-layout">
-        <div class="adr-list reveal">
-          <article class="adr-row"><span class="adr-id">ADR-0001</span><div><h3>卡片直达应用</h3><p>「进入演示」直达应用登录页，不再有中间过渡页；项目信息全部上卡片。</p></div><span class="adr-state">LIVE</span><span class="adr-arrow">↗</span></article>
-          <article class="adr-row"><span class="adr-id">ADR-0002</span><div><h3>公网 18090–18094 反代</h3><p>隧道只绑服务器回环 18095–18099，本机 IP 不外泄。</p></div><span class="adr-state">LIVE</span><span class="adr-arrow">↗</span></article>
-          <article class="adr-row updated"><span class="adr-id">ADR-0003</span><div><h3>摘掉口令，五入口统一 → /login</h3><p>移除 18090 / 18091 / 18092 的 Caddy Basic Auth；五个入口全部指向登录注册页。</p></div><span class="adr-state">已落地</span><span class="adr-arrow">↗</span></article>
-          <article class="adr-row"><span class="adr-id">ADR-0004</span><div><h3>SSH 反向隧道</h3><p>本地项目经隧道映射到服务器，外网零暴露本机 IP；重连由脚本守护。</p></div><span class="adr-state">LIVE</span><span class="adr-arrow">↗</span></article>
-          <article class="adr-row"><span class="adr-id">ADR-0005</span><div><h3>实测，不编造</h3><p>本页数字均为 2026-10-16 实测：源码统计 + 运行时探测；未做的明写。</p></div><span class="adr-state">VERIFIED</span><span class="adr-arrow">↗</span></article>
-          <article class="adr-row"><span class="adr-id">ADR-0006</span><div><h3>墨枢常驻免隧道</h3><p>其余 4 个依赖本机「一键启动」+ 隧道存活，否则对外不可达。</p></div><span class="adr-state">NOTE</span><span class="adr-arrow">↗</span></article>
-        </div>
-
-        <aside class="topology reveal" style="--d:100ms">
-          <div class="topo-head"><span>REQUEST PATH / 2026</span><span><b>● LIVE</b></span></div>
-          <div class="topo-stamp">NO<br>PASSWORD</div>
-          <div class="topo-flow">
-            <div class="topo-node"><span class="tname">卡片入口</span><span class="tmeta">18088 / HTTPS</span></div>
-            <div class="topo-node"><span class="tname">SSH 反向隧道</span><span class="tmeta">回环 18095–18099</span></div>
-            <div class="topo-node"><span class="tname">Caddy 公网反代</span><span class="tmeta">18090–18094</span></div>
-            <div class="topo-node on"><span class="tname">登录 / 注册页</span><span class="tmeta">/login · 0 PASSWORD</span></div>
-            <div class="topo-node"><span class="tname">墨枢常驻</span><span class="tmeta">18089 / STANDALONE</span></div>
-          </div>
-          <div class="topo-note">✳ 五个入口统一到 /login，不再有口令弹窗</div>
-          <div class="topo-term">curl -I 43.136.14.168:18090/login <b>→ 200</b></div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- 05 evidence -->
+  <!-- 04 evidence -->
   <section class="section evidence" id="evidence">
     <div class="wrap">
       <header class="sec-head reveal">
-        <div class="sec-kicker"><span class="sec-index">05</span><span class="sec-line"></span>EVIDENCE / SOURCE OF TRUTH</div>
+        <div class="sec-kicker"><span class="sec-index">04</span><span class="sec-line"></span>EVIDENCE / SOURCE OF TRUTH</div>
         <div class="sec-title-row">
           <h2>实测数据，<br><span class="serif-en">not promises.</span></h2>
-          <p class="sec-lead">测试用例、API 与代码行按源码统计；容器与连通性按运行时探测。<b>含上游的统计单独标注</b>，不把上游成果算进个人交付。</p>
         </div>
-        <div class="sec-meta"><span>CAPTURED 2026.10.16</span><span>SOURCE STATS + RUNTIME PROBE</span><span>UPSTREAM MARKED</span></div>
+        <div class="sec-meta"><span>SOURCE STATS + RUNTIME PROBE</span><span>UPSTREAM MARKED</span></div>
       </header>
 
       <div class="proof-grid reveal">
@@ -1674,56 +1622,13 @@ html.no-motion .reveal{opacity:1;transform:none}
         </article>
       </div>
       <div class="proof-foot reveal">
-        <span><b>口径：</b>4,247 测试用例与 600 API 中，墨枢部分包含上游 Octop 代码库总量；个人交付以卡片里的「107 文件 / +5,013 行 / 77 前端测试」为准。<br>采集时间 2026-10-16 · 源码统计 + 运行时探测 · 未做的明写。</span>
-        <span class="verified-stamp">VERIFIED / 2026.10.16</span>
+        <span><b>口径：</b>4,247 测试用例与 600 API 中，墨枢部分包含上游 Octop 代码库总量；个人交付以卡片里的「107 文件 / +5,013 行 / 77 前端测试」为准。<br>源码统计 + 运行时探测 · 未做的明写。</span>
+        <span class="verified-stamp">VERIFIED</span>
       </div>
     </div>
   </section>
 
-  <!-- 06 compare -->
-  <section class="section compare-sec" id="compare">
-    <div class="wrap">
-      <header class="sec-head reveal">
-        <div class="sec-kicker"><span class="sec-index">06</span><span class="sec-line"></span>ACCESS</div>
-        <div class="sec-title-row">
-          <h2>一种应用，<br><span class="serif-en">two ways in.</span></h2>
-          <p class="sec-lead">同一个本地应用，两种访问方式。对外发布走隧道反代：<b>本机 IP 不出网、暴露面最小</b>，且全程没有口令弹窗。</p>
-        </div>
-      </header>
-      <div class="compare-grid reveal">
-        <div class="access-card local">
-          <div class="access-head"><span class="access-kicker">LOCAL / DEVELOPMENT</span><span class="access-status">本地预览</span></div>
-          <h3>本机直连</h3>
-          <p class="access-sub">在自己电脑上跑通，不经过公网。</p>
-          <div class="access-rows">
-            <div class="access-row"><span>访问地址</span><b>localhost:8180 等</b></div>
-            <div class="access-row"><span>本机 IP 暴露</span><b>仅局域网</b></div>
-            <div class="access-row"><span>服务器防火墙</span><b>不涉及</b></div>
-            <div class="access-row"><span>认证</span><b>无</b></div>
-            <div class="access-row"><span>依赖</span><b>本机在跑即可</b></div>
-            <div class="access-row"><span>适用</span><b>本地预览</b></div>
-          </div>
-        </div>
-        <div class="vs"><b>VS</b></div>
-        <div class="access-card tunnel">
-          <div class="access-head"><span class="access-kicker">PUBLIC / THIS SITE</span><span class="access-status">推荐</span></div>
-          <h3>公网隧道 <span class="recommend">THIS</span></h3>
-          <p class="access-sub">对外分享、面试演示走这一条。</p>
-          <div class="access-rows">
-            <div class="access-row"><span>访问地址</span><b class="hl">43.136.14.168:18093 等</b></div>
-            <div class="access-row"><span>本机 IP 暴露</span><b class="hl">零暴露（仅服务器回环）</b></div>
-            <div class="access-row"><span>服务器防火墙</span><b class="hl">ufw 放通 18088–18094</b></div>
-            <div class="access-row"><span>认证</span><b class="hl">无口令 · 五入口 → /login</b></div>
-            <div class="access-row"><span>依赖</span><b class="hl">本机 + 隧道脚本存活</b></div>
-            <div class="access-row"><span>适用</span><b class="hl">对外分享 / 演示</b></div>
-          </div>
-        </div>
-      </div>
-      <div class="compare-note reveal"><span class="tag">ROOT CAUSE</span><span><b>外网 18090–18094 一度不通，根因不是腾讯云安全组</b>（0.0.0.0/0 ALL 允许），而是服务器 ufw 只放通了 22 / 18088 / 18089；放通后 7 个端口全部可达。</span></div>
-    </div>
-  </section>
-
-  <!-- 07 about -->
+  <!-- 05 about -->
   <section class="section profile-sec" id="profile">
     <div class="wrap">
       <header class="about-head reveal">
@@ -1868,7 +1773,6 @@ html.no-motion .reveal{opacity:1;transform:none}
   <footer class="site-footer">
     <div class="foot-left"><b>杨佳好</b> AI 应用开发 / FDE · 个人作品集 · v7.0<br>本页为个人作品集，不含任何口令；演示依赖本机隧道时请以卡片状态为准。</div>
     <div class="foot-links">
-      <span>数据采集于 2026-10-16</span>
       <span>PRESS G · GRID</span>
       <a href="mailto:2904410282@qq.com">EMAIL ↗</a>
       <a href="https://github.com/jiahaoyang898-max" target="_blank" rel="noopener">GITHUB ↗</a>
